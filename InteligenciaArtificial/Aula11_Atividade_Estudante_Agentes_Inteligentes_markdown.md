@@ -284,7 +284,7 @@ Resposta: [escreva aqui]
 Confira: identificação; nove análises no item 2.3; sete casos completos no item 2.4; dez conceitos no item 2.5; síntese; referências.
 Nome sugerido: `NomeSobrenome_Atividade_AgentesInteligentes`. Prazo e envio conforme orientação da professora.
 
-| Critério | Peso sugerido |
+| Critério | Atividade avaliativa (1,0 ponto) A2 |
 |---|---:|
 | Item 2.3 — correção e argumentação | 30% |
 | Item 2.4 — PEAS e classificação justificada | 40% |
