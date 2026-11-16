@@ -10,9 +10,11 @@
 ## Links
 
 - Notebook no Google Colab: [abrir no Colab](https://colab.research.google.com/drive/1fWa30sqzyK-5dhodaoRDjOn5by51pCIu?usp=sharing)
-- Notebook aqui no repositório: [BrayanPletsch_Atividade_AprendizadoSupervisionado.ipynb](BrayanPletsch_Atividade_AprendizadoSupervisionado.ipynb)
-- Dataset: [dataset_pull_requests.csv](dataset_pull_requests.csv)
-- Script que gerou o dataset: [gerar_dataset.py](gerar_dataset.py)
+- Notebook aqui no repositório: [Atividades/BrayanPletsch_Atividade_AprendizadoSupervisionado.ipynb](Atividades/BrayanPletsch_Atividade_AprendizadoSupervisionado.ipynb)
+- Dataset: [Atividades/dataset_pull_requests.csv](Atividades/dataset_pull_requests.csv)
+- Script que gerou o dataset: [Atividades/gerar_dataset.py](Atividades/gerar_dataset.py)
+
+Este arquivo explica o trabalho. Os arquivos da entrega ficam na pasta `Atividades/`.
 
 ## Resumo
 
@@ -94,9 +96,10 @@ No Colab, abrir pelo link acima e usar Ambiente de execução > Executar tudo. S
 No computador:
 
 ```
+cd AprendizadoDeMaquina/Atividades
 pip install pandas scikit-learn matplotlib jupyter
 python gerar_dataset.py
 jupyter notebook BrayanPletsch_Atividade_AprendizadoSupervisionado.ipynb
 ```
 
-O segundo comando só é necessário para gerar o CSV de novo, e o resultado é sempre o mesmo arquivo.
+O `python gerar_dataset.py` só é necessário para gerar o CSV de novo, e o resultado é sempre o mesmo arquivo.
