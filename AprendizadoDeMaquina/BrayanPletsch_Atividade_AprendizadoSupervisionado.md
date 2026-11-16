@@ -14,7 +14,7 @@
 - Dataset: [Atividades/dataset_pull_requests.csv](Atividades/dataset_pull_requests.csv)
 - Script que gerou o dataset: [Atividades/gerar_dataset.py](Atividades/gerar_dataset.py)
 
-Este arquivo explica o trabalho. Os arquivos da entrega ficam na pasta `Atividades/`.
+Este arquivo explica o trabalho. Os arquivos da entrega ficam na pasta `Atividades/`, e as capturas da execução no Colab ficam em `capturas/`.
 
 ## Resumo
 
@@ -79,6 +79,34 @@ A R5 compensa a fraqueza do modelo: dos 9 PRs arriscados que a árvore classific
 | PR-C, troca a biblioteca de hash de senha | 340 linhas, 6 arquivos, com teste, área crítica | alto | R1 | dois revisores e homologação |
 
 Na seção 10 do notebook troco só a informação de área crítica e mostro que a previsão do modelo não muda, só a regra escolhida.
+
+## Execução no Colab
+
+Capturas do notebook rodando no Google Colab, com Ambiente de execução > Executar tudo.
+
+Dataset carregado do CSV, com a contagem por classe e a tabela que confere os pesos do gerador. Os PRs pequenos sem teste ficaram com 30% de risco alto.
+
+![Dataset carregado no Colab](capturas/01_dataset.png)
+
+Separação em treino e teste e validação cruzada só com o treino. As profundidades 1 e 2 empataram em 83,3%.
+
+![Validação cruzada no Colab](capturas/02_validacao_cruzada.png)
+
+Avaliação no teste: 72% de acurácia, 7 dos 16 PRs de risco alto encontrados, a matriz de confusão, as condições que a árvore aprendeu e o desenho da árvore.
+
+![Avaliação do modelo no Colab](capturas/03_avaliacao.png)
+
+Os três PRs novos, cada um com a previsão, a regra aplicada e o rastro. No PR-B aparecem os dois passos do encadeamento, D1 e depois R2.
+
+![Três PRs novos no Colab](capturas/04_tres_casos.png)
+
+Os mesmos números de PR trocando só a área crítica. O risco previsto fica igual e só a regra muda.
+
+![Mudando a área crítica no Colab](capturas/05_mudando_area_critica.png)
+
+Testes do motor com os casos positivo, negativo, de informação ausente e de encadeamento, mais as 24 combinações de fatos passando pelo motor.
+
+![Testes das regras no Colab](capturas/06_testes.png)
 
 ## Limitações que encontrei
 
