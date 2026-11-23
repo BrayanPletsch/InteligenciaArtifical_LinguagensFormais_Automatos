@@ -83,7 +83,7 @@ class AutomatosBinariosTest(unittest.TestCase):
 
 
 def carrega_padroes_regex():
-    caminho = RAIZ_DO_REPOSITORIO / "Expressoes_Regulares" / "Atividades" / "padroes_regex.py"
+    caminho = RAIZ_DO_REPOSITORIO / "Atividades" / "04_ExpressoesRegulares" / "entrega" / "padroes_regex.py"
     especificacao = importlib.util.spec_from_file_location("padroes_regex", caminho)
     modulo = importlib.util.module_from_spec(especificacao)
     especificacao.loader.exec_module(modulo)

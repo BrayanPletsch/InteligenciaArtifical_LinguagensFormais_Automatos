@@ -2,7 +2,7 @@
 
 **Estudante:** Brayan Aragão Pletsch  
 **RGM:** 38473585  
-**Curso/Turma:** Engenharia de Software - N1  
+**Curso/Turma:** Engenharia de Software - N1 (noturno)  
 **Disciplina:** Inteligência Artificial, Linguagens Formais e Autômatos  
 **Professora:** Kadidja Valéria  
 **Aula:** 13 (09/11/2026), Aprendizado de máquina: introdução
@@ -10,11 +10,11 @@
 ## Links
 
 - Notebook no Google Colab: [abrir no Colab](https://colab.research.google.com/drive/1fWa30sqzyK-5dhodaoRDjOn5by51pCIu?usp=sharing)
-- Notebook aqui no repositório: [Atividades/BrayanPletsch_Atividade_AprendizadoSupervisionado.ipynb](Atividades/BrayanPletsch_Atividade_AprendizadoSupervisionado.ipynb)
-- Dataset: [Atividades/dataset_pull_requests.csv](Atividades/dataset_pull_requests.csv)
-- Script que gerou o dataset: [Atividades/gerar_dataset.py](Atividades/gerar_dataset.py)
+- Notebook aqui no repositório: [entrega/BrayanPletsch_Atividade_AprendizadoSupervisionado.ipynb](entrega/BrayanPletsch_Atividade_AprendizadoSupervisionado.ipynb)
+- Dataset: [entrega/dataset_pull_requests.csv](entrega/dataset_pull_requests.csv)
+- Script que gerou o dataset: [entrega/gerar_dataset.py](entrega/gerar_dataset.py)
 
-Este arquivo explica o trabalho. Os arquivos da entrega ficam na pasta `Atividades/`, e as capturas da execução no Colab ficam em `capturas/`.
+Este arquivo explica o trabalho. O notebook, o dataset, o script e as capturas da execução no Colab ficam na pasta `entrega/`.
 
 ## Resumo
 
@@ -86,27 +86,27 @@ Capturas do notebook rodando no Google Colab, com Ambiente de execução > Execu
 
 Dataset carregado do CSV, com a contagem por classe e a tabela que confere os pesos do gerador. Os PRs pequenos sem teste ficaram com 30% de risco alto.
 
-![Dataset carregado no Colab](capturas/01_dataset.png)
+![Dataset carregado no Colab](entrega/capturas/01_dataset.png)
 
 Separação em treino e teste e validação cruzada só com o treino. As profundidades 1 e 2 empataram em 83,3%.
 
-![Validação cruzada no Colab](capturas/02_validacao_cruzada.png)
+![Validação cruzada no Colab](entrega/capturas/02_validacao_cruzada.png)
 
 Avaliação no teste: 72% de acurácia, 7 dos 16 PRs de risco alto encontrados, a matriz de confusão, as condições que a árvore aprendeu e o desenho da árvore.
 
-![Avaliação do modelo no Colab](capturas/03_avaliacao.png)
+![Avaliação do modelo no Colab](entrega/capturas/03_avaliacao.png)
 
 Os três PRs novos, cada um com a previsão, a regra aplicada e o rastro. No PR-B aparecem os dois passos do encadeamento, D1 e depois R2.
 
-![Três PRs novos no Colab](capturas/04_tres_casos.png)
+![Três PRs novos no Colab](entrega/capturas/04_tres_casos.png)
 
 Os mesmos números de PR trocando só a área crítica. O risco previsto fica igual e só a regra muda.
 
-![Mudando a área crítica no Colab](capturas/05_mudando_area_critica.png)
+![Mudando a área crítica no Colab](entrega/capturas/05_mudando_area_critica.png)
 
 Testes do motor com os casos positivo, negativo, de informação ausente e de encadeamento, mais as 24 combinações de fatos passando pelo motor.
 
-![Testes das regras no Colab](capturas/06_testes.png)
+![Testes das regras no Colab](entrega/capturas/06_testes.png)
 
 ## Limitações que encontrei
 
@@ -124,7 +124,7 @@ No Colab, abrir pelo link acima e usar Ambiente de execução > Executar tudo. S
 No computador:
 
 ```
-cd AprendizadoDeMaquina/Atividades
+cd Atividades/08_AprendizadoSupervisionado/entrega
 pip install pandas scikit-learn matplotlib jupyter
 python gerar_dataset.py
 jupyter notebook BrayanPletsch_Atividade_AprendizadoSupervisionado.ipynb

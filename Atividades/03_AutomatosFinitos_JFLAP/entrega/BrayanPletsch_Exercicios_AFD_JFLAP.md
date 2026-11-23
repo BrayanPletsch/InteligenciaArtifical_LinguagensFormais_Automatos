@@ -266,7 +266,7 @@ $ python3 simulador_afd.py afd_termina_em_00.jff 100 1001 ""
 - que os quatro AFDs binários têm transição definida para 0 e para 1 em todos os estados;
 - que cada um deles aceita exatamente as palavras da sua linguagem, comparando com a definição escrita em Python para todas as palavras binárias até tamanho 12;
 - as cinco cadeias do Exemplo Prático 1 e o caminho da palavra 101;
-- os casos aceitos e rejeitados do desafio da matrícula, e que o AFD da matrícula dá o mesmo resultado que a Regex `MATRICULA` de `Expressoes_Regulares/Atividades/padroes_regex.py` em 2.370 variações de matrículas válidas;
+- os casos aceitos e rejeitados do desafio da matrícula, e que o AFD da matrícula dá o mesmo resultado que a Regex `MATRICULA` de `Atividades/04_ExpressoesRegulares/entrega/padroes_regex.py` em 2.370 variações de matrículas válidas;
 - que o leitor recusa arquivos não determinísticos, com transição vazia ou com rótulo de mais de um símbolo.
 
 Comando, dentro desta pasta: `python3 -m unittest -v test_simulador_afd` (12 testes, todos passando).

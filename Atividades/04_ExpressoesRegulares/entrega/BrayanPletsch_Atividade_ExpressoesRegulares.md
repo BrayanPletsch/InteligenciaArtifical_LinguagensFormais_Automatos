@@ -138,11 +138,11 @@ Os anos válidos têm o prefixo `202` em comum e só o último dígito muda, de 
 `^` e `$` obrigam a correspondência a começar no início e terminar no fim da entrada. Sem elas, uma busca acharia uma matrícula válida dentro de um texto maior, como em ` CCO-2026-0001-M` ou `CCO-2026-0001-MN`. No Python eu usei `re.fullmatch`, que já exige a cadeia inteira. Encontrei um detalhe nos testes: no Python o `$` também casa antes de uma quebra de linha final, então `re.match(MATRICULA, "CCO-2026-0001-M\n")` encontra correspondência, enquanto `re.fullmatch` rejeita (teste `test_fullmatch_rejeita_quebra_de_linha_que_o_cifrao_deixa_passar`). Esse é o motivo de eu preferir `fullmatch` na validação.
 
 **5. Sua expressão aceita alguma cadeia que viola as regras? Como os testes sustentam a resposta?**  
-Pelos testes, não. Rodei os 5 aceitos e os 6 rejeitados do material, mais 2 válidos e 6 inválidos que criei (limites de ano, quase corretos, caractere extra, letra `O` no lugar do zero e quebra de linha no fim). Também testei todos os anos de 2000 a 2099. No teste do AFD equivalente (pasta `Unidade2_GramaticasFormais/Atividades/AFD_JFLAP`), comparei a regex com o autômato em 2.370 variações de três matrículas válidas (cada posição trocada, apagada ou com um símbolo inserido) e os dois deram o mesmo resultado em todas. Teste não prova ausência de erro, mas a estrutura da regex é a mesma da definição formal bloco a bloco, e os casos de fronteira foram cobertos.
+Pelos testes, não. Rodei os 5 aceitos e os 6 rejeitados do material, mais 2 válidos e 6 inválidos que criei (limites de ano, quase corretos, caractere extra, letra `O` no lugar do zero e quebra de linha no fim). Também testei todos os anos de 2000 a 2099. No teste do AFD equivalente (pasta `Atividades/03_AutomatosFinitos_JFLAP/entrega`), comparei a regex com o autômato em 2.370 variações de três matrículas válidas (cada posição trocada, apagada ou com um símbolo inserido) e os dois deram o mesmo resultado em todas. Teste não prova ausência de erro, mas a estrutura da regex é a mesma da definição formal bloco a bloco, e os casos de fronteira foram cobertos.
 
 ### Desafio extra — DFA equivalente
 
-O AFD completo está em `Unidade2_GramaticasFormais/Atividades/AFD_JFLAP/afd_matricula.jff`, com definição formal e tabela de transição no relatório daquela pasta. Resumo:
+O AFD completo está em `Atividades/03_AutomatosFinitos_JFLAP/entrega/afd_matricula.jff`, com definição formal e tabela de transição no relatório daquela pasta. Resumo:
 
 ```text
 q0 -C-> qC -C-> qCC -O-> qCurso

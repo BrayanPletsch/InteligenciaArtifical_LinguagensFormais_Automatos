@@ -6,7 +6,7 @@ Teoria da Computação | Profª Kadidja Valéria | Aula 09 (28/09/2026) | Valor:
 
 Material indicado: vídeo Akitando #86, "O Computador de Turing e Von Neumann: Por que calculadoras não são computadores?".
 
-Arquivos que acompanham esta entrega, na pasta `MaquinasDeTuring/` do meu repositório:
+Arquivos que acompanham esta entrega, na pasta `Atividades/05_MaquinasDeTuring/entrega/` do meu repositório:
 
 - `maquina_0n1n.jff`: a máquina construída no JFLAP;
 - `simulador_mt.py`: simulador em Python que lê o mesmo `.jff` e imprime cada configuração da execução;
@@ -185,7 +185,7 @@ Teste 3, entrada `00111`:
 | 011 | REJEITA | REJEITA | q0, q1, q2, q0, q3 | $q_3$ lendo 1: sobrou um 1 sem par |
 | $\varepsilon$ (vazia) | REJEITA | REJEITA | q0 | $q_0$ lendo $\square$ ($n \geq 1$) |
 
-Além desses, os testes automatizados (`python3 -m unittest discover -s MaquinasDeTuring`) rodam a máquina em todas as 2047 palavras sobre $\{0, 1\}$ com até 10 símbolos e comparam com a definição de $0^n1^n$. Todas deram o resultado esperado, inclusive casos com a mesma quantidade de símbolos fora de ordem, como `10`, `0101` e `0110`.
+Além desses, os testes automatizados (`python3 -m unittest discover -s Atividades/05_MaquinasDeTuring/entrega`) rodam a máquina em todas as 2047 palavras sobre $\{0, 1\}$ com até 10 símbolos e comparam com a definição de $0^n1^n$. Todas deram o resultado esperado, inclusive casos com a mesma quantidade de símbolos fora de ordem, como `10`, `0101` e `0110`.
 
 ### Capturas de tela da simulação
 
